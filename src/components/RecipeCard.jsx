@@ -33,7 +33,7 @@ export default function RecipeCard({ recipe }) {
 
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardHeader
+      <CardHeader 
         title={recipe.title}
       />
       <CardMedia component="img" height="194" image={recipe.image} alt={recipe.title} />

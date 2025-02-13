@@ -45,7 +45,7 @@ export default function FavouriteList() {
   }
 
   return (
-    <div>
+    <div className='recipes'>
       {/* Form for adding/updating a recipe */}
       <input
         type="text"
