@@ -10,7 +10,6 @@ import {
   IconButton,
   Typography
 } from "@mui/material";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const ExpandMore = styled((props) => {
@@ -43,9 +42,6 @@ export default function RecipeCard({ recipe }) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
         <ExpandMore expand={expanded} onClick={handleExpandClick} aria-expanded={expanded}>
           <ExpandMoreIcon />
         </ExpandMore>
