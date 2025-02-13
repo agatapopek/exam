@@ -1,5 +1,8 @@
 import React from 'react';
 import coupleImage from '../assets/images/couple.jpg';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 export default function AboutPage() {
   return (
@@ -17,17 +20,11 @@ export default function AboutPage() {
         </section>
 
         {/* Social Media Links */}
-        <section className="social-media-links">
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-            Instagram
-          </a>
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-            Facebook
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            Twitter
-          </a>
-        </section>
+        <div style={{display: "flex", flexDirection: "row", gap:"20px", justifyContent: "center", margin: "20px"}}>
+        <a href='https://www.instagram.com/hmm__bobby_everyday/'><InstagramIcon fontSize="large" sx={{ color: "#004d40"}}/></a>
+        <a href='https://www.facebook.com/profile.php?id=100088718410451'><FacebookIcon fontSize="large" sx={{ color: "#004d40"}}/></a>
+        <a href='https://www.youtube.com/@Tejstyburgir'><YouTubeIcon fontSize="large" sx={{ color: "#004d40"}}/></a>
+        </div>
       </div>
     </>
   );

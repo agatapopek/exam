@@ -9,7 +9,7 @@ export default function ContactPage() {
         alignItems: "center",
         height: "100vh", // Full viewport height
         paddingTop: "64px", // Adjust this if your navbar height differs
-        backgroundColor: "#fafafa", // Light background color
+        backgroundColor: "#f269a0", // Light background color
       }}
     >
       <Box
@@ -29,17 +29,17 @@ export default function ContactPage() {
         <address style={{ fontStyle: "italic", marginBottom: "1rem" }}>
           456 Culinary Avenue Gourmet Town, 1010 Vienna, Austria
         </address>
-        <p style={{ fontSize: "1.1rem", marginBottom: "1.5rem" }}>
+        <p style={{ fontSize: "1.1rem", marginBottom: "1rem" }}>
           <a
-            href="mailto:idapopek@gmail.com"
-            style={{ color: "#00796b", textDecoration: "none" }}
+            href="mailto:dishdelights@contact.com"
+            style={{ color: "#f269a0", textDecoration: "none" }}
           >
-            idapopek@gmail.com
+            dishdelights@contact.com
           </a>
         </p>
 
         <Typography variant="h5" gutterBottom>
-          You need help? Send us a message
+          You need help? Send us a message👇👇👇
         </Typography>
 
         <Box
@@ -89,14 +89,14 @@ export default function ContactPage() {
           />
           <Button
             variant="contained"
-            color="primary"
             sx={{
+            backgroundColor: "#004d40",
               padding: "10px 20px",
-              borderRadius: "5px",
+              borderRadius: "30px",
               fontSize: "1rem",
               fontWeight: 600,
               "&:hover": {
-                backgroundColor: "#004d40",
+                backgroundColor: "rgb(255, 221, 0)",
               },
             }}
           >

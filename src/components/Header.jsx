@@ -5,7 +5,7 @@ export default function Header(){
         <header className="navigation">
             <nav className="nav-links">
                 <Link className="nav-link" to="">Home</Link>
-                <Link className="nav-link" to="recipies">Recipies</Link>
+                <Link className="nav-link" to="recipies">Recipes</Link>
                 <Link className="nav-link" to="favourites">Favourites</Link>
                 <Link className="nav-link" to="about">About</Link>
                 <Link className="nav-link" to="contact">Contact</Link>
