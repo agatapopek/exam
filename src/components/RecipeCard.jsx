@@ -11,10 +11,8 @@ import {
   IconButton,
   Typography
 } from "@mui/material";
-import { red } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -37,14 +35,7 @@ export default function RecipeCard({ recipe }) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
-        avatar={<Avatar sx={{ bgcolor: red[500] }}>{recipe.initial}</Avatar>}
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
         title={recipe.title}
-        subheader={recipe.date}
       />
       <CardMedia component="img" height="194" image={recipe.image} alt={recipe.title} />
       <CardContent>
