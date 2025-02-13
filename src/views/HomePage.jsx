@@ -12,7 +12,7 @@ export default function HomePage(){
             <img src={cookImage}/>
         <h1>Unleash Your Culinary Creativity with DishDelights!</h1>
         <h3>Explore a world of delicious recipes or create your own with our easy-to-use platform. Whether you're an experienced chef or a beginner, we provide the tools and inspiration to make every meal memorable!</h3>
-        <button><Link to="favourites" className='urfav'>Your recipes</Link></button>
+        <button><Link to="favourites" className='urfav'>FAVOURITES</Link></button>
         </div>
         <section>
             <h1 className='bestseller-text'>BESTSELLERS</h1>

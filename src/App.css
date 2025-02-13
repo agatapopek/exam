@@ -1,3 +1,4 @@
+/* General navigation styles */
 .navigation {
   background-color: white;
   position: fixed;
@@ -9,6 +10,9 @@
   z-index: 1000;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-links {
@@ -28,6 +32,57 @@
 .nav-link:hover {
   color: rgb(255, 221, 0);
 }
+
+/* Show the burger icon and hide nav links on mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;  /* Hide nav links initially on mobile */
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-toggle {
+    display: block; /* Show the hamburger icon on mobile */
+    cursor: pointer;
+    font-size: 30px;
+  }
+
+  .nav-links.open {
+    display: flex;  /* Show nav links when the menu is open */
+  }
+
+  .nav-link {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+}
+
+/* On desktop (larger screens), hide the burger icon and show the links */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none; /* Hide the hamburger icon on desktop */
+  }
+
+  .nav-links {
+    display: flex; /* Ensure the nav links are shown on desktop */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-link {
+    font-size: 1.2rem;
+  }
+}
+
 
 /*FOOTER*/
 /* Mobile-First Styles (Default for smaller screens) */
@@ -66,8 +121,10 @@
 
 /*List*/
 /* General styles */
-.recipes {
-  padding: 100px 20px;
+div.recipes {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 100px;
 
 }
 
@@ -87,13 +144,15 @@
 }
 
 .btn-save {
-  padding: 10px;
+  padding: 15px 25px;
   background-color: #004d40;
-  color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 30px;
   cursor: pointer;
-  font-size: 16px;
+  transition: background-color 0.3s;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .btn-save:hover {
@@ -111,7 +170,9 @@
   text-align: center;
   margin-top: 100px;
 }
-
+.create{
+  margin-bottom: 20px;
+}
 .images img{
   max-width: 60%;
   height: auto;
@@ -129,6 +190,13 @@
   font-size: 18px;
   line-height: 1.6;
   color: black;
+}
+
+.about-description p{
+  font-weight: 100;
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 30px;
 }
 
 .social-media-links {
@@ -183,10 +251,9 @@
 
 /* Hero Section Image */
 .hero-section img {
-  max-width: 100%;
+  max-width: 60%;
   height: auto;
   margin-bottom: 30px;
-  border-radius: 10px;
 }
 
 /* Button Styling */
@@ -243,8 +310,48 @@ section {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 }
 
+.bestsellers-img:hover {
+  transform: scale(1.05); /* Slightly enlarges the image */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Adds a stronger shadow effect when hovering */
+}
+
 /* Responsive Styles */
+@media (max-width: 1024px) {
+
+  .hero-section {
+      padding: 30px;
+  }
+
+  .hero-section h1 {
+      font-size: 2.8rem;
+  }
+
+  .hero-section h3 {
+      font-size: 1.4rem;
+  }
+
+  .hero-section button {
+      padding: 14px 22px;
+      font-size: 1rem;
+  }
+
+  .bestsellers-img {
+      width: 280px;
+      height: 380px;
+  }
+
+  .recipes {
+      padding: 50px 20px;
+  }
+
+  .about-container {
+      margin-top: 80px;
+  }
+}
+
 @media (max-width: 768px) {
+
+
   .hero-section {
       padding: 20px;
   }
@@ -261,9 +368,31 @@ section {
       padding: 12px 20px;
       font-size: 0.9rem;
   }
+
+  .bestsellers-img {
+      width: 250px;
+      height: 350px;
+  }
+
+  .recipes {
+    padding-top: 150px; 
+   }
+
+  .social-media-links {
+      margin-top: 15px;
+  }
+
+  .images img {
+      max-width: 80%;
+  }
 }
 
 @media (max-width: 480px) {
+
+  .hero-section {
+      padding: 10px;
+  }
+
   .hero-section h1 {
       font-size: 2rem;
   }
@@ -275,5 +404,22 @@ section {
   .hero-section button {
       padding: 10px 18px;
       font-size: 0.85rem;
+  }
+
+  .bestsellers-img {
+      width: 200px;
+      height: 280px;
+  }
+
+  .recipes {
+      padding: 30px 10px;
+  }
+
+  .about-container {
+      margin-top: 60px;
+  }
+
+  .social-media-links a {
+      font-size: 18px;
   }
 }

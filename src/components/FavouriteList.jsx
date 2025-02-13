@@ -53,7 +53,7 @@ export default function FavouriteList() {
 
   return (
     <div className="recipes">
-      <h1>Create a recipe</h1>
+      <h1 className='create'>Create a recipe</h1>
       {/* Form for adding/updating a recipe */}
       <div className="form-container">
         <input

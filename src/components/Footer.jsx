@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer(){
     return(
         <>
@@ -8,11 +10,11 @@ export default function Footer(){
                         </p>
                     </div>
                     <div className="sb__footer-below-links">
-                        <p>Home</p>
-                        <p>Recipies</p>
-                        <p>Favourites</p>
-                        <p>About</p>
-                        <p>Contact</p>
+                        <p ><Link to="">Home</Link></p>
+                        <p><Link to="recipies">Recipes</Link></p>
+                        <p><Link to="favourites">Favourites</Link></p>
+                        <p><Link to="about">About</Link></p>
+                        <p><Link to="contact">Contact</Link></p>
                     </div>
                 </div>
                 </>
