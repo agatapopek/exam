@@ -1,24 +1,22 @@
 .navigation {
+  background-color: white;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: #2C3E50;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   z-index: 1000;
 }
 
 .nav-links {
-  background-color: #2C3E50;
   display: flex;
   justify-content: flex-start;
   gap: 20px;
 }
 
 .nav-link {
-  color: #ffffff;
-  background-color: #2C3E50;
+  color: black;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
@@ -26,13 +24,13 @@
 }
 
 .nav-link:hover {
-  color: #FF6F61;
+  color: rgb(255, 221, 0);
 }
 
 /*FOOTER*/
 
 .sb__footer-below{
-  background-color: #2C3E50;
+  background-color: rgb(255, 221, 0);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -42,7 +40,7 @@
 
 .sb__footer-below-links{
   display: flex;
-  background-color: #2C3E50;
+  background-color: rgb(255, 221, 0);
   flex-direction: row;
 }
 
@@ -50,17 +48,17 @@
   font-size: 13px;
   line-height: 15px;
   margin-left: 2rem;
-  color: rgb(255, 255, 255);
+  color: black;
   font-weight: 600;
-  background-color: #2C3E50;
+  background-color: rgb(255, 221, 0);
 }
 
 
 .sb__footer-copyright p{
   font-size: 13px;
   line-height: 15px;
-  background-color: #2C3E50;
-  color: #ffffff;
+  background-color: rgb(255, 221, 0);
+  color: black;
   font-weight: 600;
 }
 
@@ -129,25 +127,28 @@
 
 /*hero*/
 .hero-section {
+  background-color: rgb(255, 221, 0);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  border-radius: 20px;
+  margin: 80px 20px;
   padding: 50px;
-  margin-top: 80px;  /* Adjust margin for the navbar height */
+  padding-top: 80px;  /* Adjust margin for the navbar height */
 }
 
 /* Hero Section Text */
 .hero-section h1 {
   font-size: 3rem;
-  color: #333;
+  color: black;
   margin-bottom: 15px;
 }
 
 .hero-section h3 {
   font-size: 1.5rem;
-  color: #555;
+  color: black;
   margin-bottom: 30px;
 }
 
@@ -162,19 +163,53 @@
 /* Button Styling */
 .hero-section button {
   padding: 15px 25px;
-  background-color: #FF6347;
+  background-color: #46b8ce;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .hero-section button:hover {
-  background-color: #FF4500;
+  background-color: #3e1607;
+}
+.bestseller-text{
+  font-size: 3rem;
+  color: black;
+  margin-bottom: 15px;
+}
+.title {
+  display: flex; /* Enables flexbox */
+  justify-content: space-between; /* Spaces out the elements: h1 on the left, button on the right */
+  align-items: center; /* Aligns both vertically in the center */
+  padding: 0 20px;
+}
+section {
+  text-align: center; /* Centers the section content */
+  
 }
 
+.bestsellers-img {
+  display: inline-block; /* Places images in a row */
+  width: 300px; /* Set a specific width for all images */
+  height: 400px; /* Set a specific height for all images */
+  object-fit: cover; /* Ensures the images cover the container while maintaining aspect ratio */
+  border-radius: 10px; /* Rounds the corners of the images */
+  margin: 10px; /* Adds spacing between the images */
+}
+
+.seemore-button{
+  padding: 15px 25px;
+  background-color: #46b8ce;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 /* Responsive Styles */
 @media (max-width: 768px) {
   .hero-section {
