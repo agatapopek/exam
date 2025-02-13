@@ -1,4 +1,4 @@
-/* General navigation styles */
+/*NAVIGATION*/
 .navigation {
   background-color: white;
   position: fixed;
@@ -16,8 +16,6 @@
 }
 
 .nav-links {
-  display: flex;
-  justify-content: flex-start;
   gap: 20px;
 }
 
@@ -33,59 +31,7 @@
   color: rgb(255, 221, 0);
 }
 
-/* Show the burger icon and hide nav links on mobile */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;  /* Hide nav links initially on mobile */
-    flex-direction: column;
-    width: 100%;
-    background-color: white;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    padding: 10px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  }
-
-  .menu-toggle {
-    display: block; /* Show the hamburger icon on mobile */
-    cursor: pointer;
-    font-size: 30px;
-  }
-
-  .nav-links.open {
-    display: flex;  /* Show nav links when the menu is open */
-  }
-
-  .nav-link {
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-}
-
-/* On desktop (larger screens), hide the burger icon and show the links */
-@media (min-width: 769px) {
-  .menu-toggle {
-    display: none; /* Hide the hamburger icon on desktop */
-  }
-
-  .nav-links {
-    display: flex; /* Ensure the nav links are shown on desktop */
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-link {
-    font-size: 1.2rem;
-  }
-}
-
-
 /*FOOTER*/
-/* Mobile-First Styles (Default for smaller screens) */
 .sb__footer-below {
   background-color: rgb(255, 221, 0);
   display: flex;
@@ -104,8 +50,7 @@
 .sb__footer-below-links p {
   font-size: 12px;
   line-height: 18px;
-  margin: 5px 0; /* Reduced margin between items */
-  color: black;
+  margin: 5px 0; 
   font-weight: 600;
   background-color: rgb(255, 221, 0);
 }
@@ -119,8 +64,7 @@
 }
 
 
-/*List*/
-/* General styles */
+/*FAVOURITES*/
 div.recipes {
   padding-left: 20px;
   padding-right: 20px;
@@ -132,7 +76,7 @@ div.recipes {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Adds space between the inputs */
+  gap: 10px;
 }
 
 .input-field {
@@ -140,7 +84,7 @@ div.recipes {
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 16px;
-  width: 100%; /* Makes sure the input takes the full width of its container */
+  width: 100%;
 }
 
 .btn-save {
@@ -160,66 +104,52 @@ div.recipes {
 }
 
 
-/*About*/
-
-.images{
-  display: flex;
-  flex-direction: row;
-}
+/* ABOUT PAGE */
 .about-container {
   text-align: center;
-  margin-top: 100px;
-}
-.create{
-  margin-bottom: 20px;
-}
-.images img{
-  max-width: 60%;
-  height: auto;
-  border-radius: 10px;
+  margin-top: 70px;
+  padding: 20px;
 }
 
 .about-image {
-  max-width: 60%;
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
 .about-description {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 1.5rem;
   line-height: 1.6;
   color: black;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.about-description p{
+.about-description p {
   font-weight: 100;
-  font-size: 1.5rem;
-  color: black;
   margin-bottom: 30px;
 }
 
-.social-media-links {
-  margin-top: 20px;
+.social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px;
 }
 
-.social-media-links a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: black;
-  font-size: 20px;
+.social-icon {
+  color: #004d40;
+  transition: transform 0.3s ease;
 }
 
-.social-media-links a:hover {
-  color: #d9534f;
+.social-icon:hover {
+  transform: scale(1.1);
 }
 
-/*CONTACT*/
-.contact-info{
-  margin-top: 100px;
-}
-
-/*hero*/
+/*HOMEPAGE*/
 .hero-section {
   background-color: rgb(255, 221, 0);
   display: flex;
@@ -232,10 +162,10 @@ div.recipes {
   margin-left: 20px;
   margin-right: 20px;
   padding: 50px;
-  padding-top: 80px;  /* Adjust margin for the navbar height */
+  padding-top: 80px; 
 }
 
-/* Hero Section Text */
+
 .hero-section h1 {
   font-size: 3rem;
   color: black;
@@ -249,14 +179,14 @@ div.recipes {
   margin-bottom: 30px;
 }
 
-/* Hero Section Image */
+
 .hero-section img {
   max-width: 60%;
   height: auto;
   margin-bottom: 30px;
 }
 
-/* Button Styling */
+
 .hero-section button {
   padding: 15px 25px;
   background-color: #004d40;
@@ -284,11 +214,14 @@ div.recipes {
   font-size: 3rem;
   color: black;
   margin-bottom: 15px;
+  margin: 0 auto; /* Ensures the text is centered properly */
+  padding: 20px 0; /* Adds space around the text inside the section */
+  display: block;
 }
 .title {
-  display: flex; /* Enables flexbox */
-  justify-content: space-between; /* Spaces out the elements: h1 on the left, button on the right */
-  align-items: center; /* Aligns both vertically in the center */
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
   padding: 0 20px;
 }
 section {
@@ -316,110 +249,162 @@ section {
 }
 
 /* Responsive Styles */
+/* Tablet Styles (max-width: 1024px) */
 @media (max-width: 1024px) {
-
   .hero-section {
-      padding: 30px;
+    padding: 30px;
   }
-
   .hero-section h1 {
-      font-size: 2.8rem;
+    font-size: 2.8rem;
   }
-
   .hero-section h3 {
-      font-size: 1.4rem;
+    font-size: 1.4rem;
   }
-
   .hero-section button {
-      padding: 14px 22px;
-      font-size: 1rem;
+    padding: 14px 22px;
+    font-size: 1rem;
   }
-
   .bestsellers-img {
-      width: 280px;
-      height: 380px;
+    width: 280px;
+    height: 380px;
   }
-
   .recipes {
-      padding: 50px 20px;
+    padding: 50px 20px;
   }
-
   .about-container {
-      margin-top: 80px;
+    margin-top: 80px;
+  }
+  .about-image {
+    max-width: 70%;
+  }
+  .about-description {
+    font-size: 1.4rem;
   }
 }
 
+/* Mobile Styles (max-width: 768px) */
 @media (max-width: 768px) {
-
-
   .hero-section {
-      padding: 20px;
+    padding: 20px;
+    margin-top: 100px;
   }
-
   .hero-section h1 {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
-
   .hero-section h3 {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
-
   .hero-section button {
-      padding: 12px 20px;
-      font-size: 0.9rem;
+    padding: 12px 20px;
+    font-size: 0.9rem;
   }
-
+  .bestseller-text {
+    font-size: 2rem; /* Reduce font size for mobile */
+  }
   .bestsellers-img {
-      width: 250px;
-      height: 350px;
+    width: 250px;
+    height: 350px;
   }
-
   .recipes {
-    padding-top: 150px; 
-   }
-
-  .social-media-links {
-      margin-top: 15px;
+    padding-top: 150px;
   }
-
+  .social-media-links {
+    margin-top: 15px;
+  }
   .images img {
-      max-width: 80%;
+    max-width: 80%;
+  }
+  .about-container {
+    margin-top: 80px;
+    padding: 10px;
+  }
+  .about-image {
+    max-width: 80%;
+  }
+  .about-description {
+    font-size: 1.3rem;
+    padding: 0 15px;
+  }
+  .social-links {
+    gap: 15px;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 30px;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-link {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
   }
 }
 
+/* Small Mobile Styles (max-width: 480px) */
 @media (max-width: 480px) {
-
   .hero-section {
-      padding: 10px;
+    padding: 10px;
   }
-
   .hero-section h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
-
   .hero-section h3 {
-      font-size: 1rem;
+    font-size: 1rem;
   }
-
   .hero-section button {
-      padding: 10px 18px;
-      font-size: 0.85rem;
+    padding: 10px 18px;
+    font-size: 0.85rem;
   }
-
   .bestsellers-img {
-      width: 200px;
-      height: 280px;
+    width: 200px;
+    height: 280px;
   }
-
   .recipes {
-      padding: 30px 10px;
+    padding: 30px 10px;
   }
-
   .about-container {
-      margin-top: 60px;
+    margin-top: 90px;
   }
-
+  .about-image {
+    max-width: 100%;
+  }
+  .about-description {
+    font-size: 1.2rem;
+    padding: 10px 25px;
+  }
+  .social-links {
+    flex-direction: column;
+    gap: 10px;
+  }
   .social-media-links a {
-      font-size: 18px;
+    font-size: 18px;
+  }
+  .nav-link {
+    font-size: 1.2rem;
+  }
+}
+
+/* Desktop Styles (min-width: 769px) */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
   }
 }

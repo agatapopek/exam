@@ -8,10 +8,8 @@ export default function AboutPage() {
   return (
     <>
       <div className="about-container">
-        {/* Image of the cooks or the people behind the company */}
         <img src={coupleImage} alt="Founders of DishDelights" className="about-image" />
         
-        {/* Company Purpose */}
         <section className="about-description">
           <h1>About DishDelights</h1>
           <p>
@@ -19,8 +17,7 @@ export default function AboutPage() {
           </p>
         </section>
 
-        {/* Social Media Links */}
-        <div style={{display: "flex", flexDirection: "row", gap:"20px", justifyContent: "center", margin: "20px"}}>
+        <div className="social-links" style={{display: "flex", flexDirection: "row", gap:"20px", justifyContent: "center", margin: "20px"}}>
         <a href='https://www.instagram.com/hmm__bobby_everyday/'><InstagramIcon fontSize="large" sx={{ color: "#004d40"}}/></a>
         <a href='https://www.facebook.com/profile.php?id=100088718410451'><FacebookIcon fontSize="large" sx={{ color: "#004d40"}}/></a>
         <a href='https://www.youtube.com/@Tejstyburgir'><YouTubeIcon fontSize="large" sx={{ color: "#004d40"}}/></a>

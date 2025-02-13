@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
-import { useState } from "react"; // Importing useState to manage the menu state
+import { useState } from "react"; 
 
 export default function Header() {
-    const [isOpen, setIsOpen] = useState(false); // State to toggle the menu
+    const [isOpen, setIsOpen] = useState(false); 
 
     const toggleMenu = () => {
-        setIsOpen(!isOpen); // Toggle the isOpen state
+        setIsOpen(!isOpen);
     };
 
     return (
         <header className="navigation">
             <div className="menu-toggle" onClick={toggleMenu}>
-                &#9776; {/* Hamburger icon */}
+                &#9776;
             </div>
             <nav className={`nav-links ${isOpen ? 'open' : ''}`}>
                 <Link className="nav-link" to="">Home</Link>

@@ -6,9 +6,7 @@ export default function Layout(){
     return(
         <>
         <Header/>
-        <main className="mainpart">
             <Outlet/>
-        </main>
         <Footer/>
         </>
     )
