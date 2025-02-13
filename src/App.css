@@ -7,6 +7,8 @@
   padding: 20px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   z-index: 1000;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .nav-links {
@@ -134,7 +136,9 @@
   justify-content: center;
   text-align: center;
   border-radius: 20px;
-  margin: 80px 20px;
+  margin-top: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
   padding: 50px;
   padding-top: 80px;  /* Adjust margin for the navbar height */
 }
@@ -163,7 +167,7 @@
 /* Button Styling */
 .hero-section button {
   padding: 15px 25px;
-  background-color: #46b8ce;
+  background-color: #f269a0;
   color: white;
   border: none;
   border-radius: 30px;
@@ -187,7 +191,11 @@
   padding: 0 20px;
 }
 section {
-  text-align: center; /* Centers the section content */
+  background-color: #f269a0;
+  text-align: center;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 50px;
   
 }
 

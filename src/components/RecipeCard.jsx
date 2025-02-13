@@ -48,7 +48,7 @@ export default function RecipeCard({ recipe }) {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography variant="h6">Method:</Typography>
+          <Typography variant="h6">Recipe:</Typography>
           {recipe.method.map((step, index) => (
             <Typography key={index} sx={{ marginBottom: 2 }}>
               {step}
