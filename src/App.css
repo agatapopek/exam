@@ -16,6 +16,7 @@
 }
 
 .nav-links {
+  display: flex;
   gap: 20px;
 }
 
@@ -46,6 +47,15 @@
   align-items: center;
   margin-top: 10px;
 }
+.sb__footer-below-links a{
+  color: black; /* Makes the links black */
+  text-decoration: none; /* Removes the underline */
+}
+
+.sb__footer-below-links a:hover {
+  color: #004d40; /* Dark green */
+  text-decoration: underline;
+}
 
 .sb__footer-below-links p {
   font-size: 12px;
@@ -69,7 +79,6 @@ div.recipes {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 100px;
-
 }
 
 .form-container {
@@ -201,8 +210,6 @@ div.recipes {
 .urfav{
   color: white;
   text-decoration: none;
-  color: white;
-  text-decoration: none;
   font-size: 1rem;
   font-weight: 600;
 }
@@ -214,8 +221,8 @@ div.recipes {
   font-size: 3rem;
   color: black;
   margin-bottom: 15px;
-  margin: 0 auto; /* Ensures the text is centered properly */
-  padding: 20px 0; /* Adds space around the text inside the section */
+  margin: 0 auto; 
+  padding: 20px 0;
   display: block;
 }
 .title {
@@ -232,20 +239,20 @@ section {
   padding: 50px;
   
 }
-
 .bestsellers-img {
-  display: inline-block; /* Places images in a row */
-  width: 300px; /* Set a specific width for all images */
-  height: 400px; /* Set a specific height for all images */
-  object-fit: cover; /* Ensures the images cover the container while maintaining aspect ratio */
-  border-radius: 10px; /* Rounds the corners of the images */
-  margin: 10px; /* Adds spacing between the images */
+  display: inline-block; 
+  width: 300px; 
+  height: 400px; 
+  object-fit: cover; 
+  border-radius: 10px; 
+  margin: 10px; 
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .bestsellers-img:hover {
-  transform: scale(1.05); /* Slightly enlarges the image */
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Adds a stronger shadow effect when hovering */
+  transform: scale(1.05); 
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); 
 }
 
 /* Responsive Styles */
@@ -299,7 +306,7 @@ section {
     font-size: 0.9rem;
   }
   .bestseller-text {
-    font-size: 2rem; /* Reduce font size for mobile */
+    font-size: 2rem;
   }
   .bestsellers-img {
     width: 250px;

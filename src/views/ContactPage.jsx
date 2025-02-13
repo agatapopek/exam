@@ -21,6 +21,7 @@ export default function ContactPage() {
           borderRadius: 2,
           boxShadow: 3,
           textAlign: "center",
+          marginTop: "65px"
         }}
       >
         <Typography variant="h4" sx={{ fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" } }} gutterBottom>

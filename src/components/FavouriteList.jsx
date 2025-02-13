@@ -10,7 +10,7 @@ export default function FavouriteList() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [editingIndex, setEditingIndex] = useState(null);
-  const [expanded, setExpanded] = useState({}); // Track expanded state for each recipe
+  const [expanded, setExpanded] = useState({}); 
 
   useEffect(() => {
     localStorage.setItem('recipes', JSON.stringify(recipes));
@@ -43,18 +43,18 @@ export default function FavouriteList() {
     setEditingIndex(index);
   }
 
-  // Toggle collapse for the recipe description
+  
   const handleExpandClick = (index) => {
     setExpanded((prevExpanded) => ({
       ...prevExpanded,
-      [index]: !prevExpanded[index], // Toggle the state of the clicked recipe
+      [index]: !prevExpanded[index], 
     }));
   };
 
   return (
     <div className="recipes">
       <h1 className='create'>Create a recipe</h1>
-      {/* Form for adding/updating a recipe */}
+      
       <div className="form-container">
         <input
           type="text"
@@ -74,7 +74,6 @@ export default function FavouriteList() {
         </button>
       </div>
 
-      {/* Display list of recipes in a row */}
       <Grid container spacing={2} justifyContent="flex-start">
         {recipes.map((recipe, index) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
@@ -82,7 +81,7 @@ export default function FavouriteList() {
               <CardHeader title={recipe.title} />
               <CardContent>
                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                  {/* Collapse the description */}
+          
                   <Collapse in={expanded[index]} timeout="auto" unmountOnExit>
                     <Typography variant="body2" sx={{ wordWrap: 'break-word', whiteSpace: 'pre-wrap' }}>
                       {recipe.description}
@@ -98,10 +97,10 @@ export default function FavouriteList() {
                   <DeleteIcon />
                 </IconButton>
                 <IconButton
-                  onClick={() => handleExpandClick(index)} // Toggle collapse on click
+                  onClick={() => handleExpandClick(index)} 
                   aria-label="toggle description"
                 >
-                  {/* Toggle ExpandMoreIcon and ExpandLessIcon based on expanded state */}
+                  
                   {expanded[index] ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                 </IconButton>
               </CardActions>

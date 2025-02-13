@@ -163,17 +163,15 @@ export default function RecipeList() {
     const [category, setCategory] = useState("");
     const [searchTerm, setSearchTerm] = useState("");
   
-    // Handle category change
+
     const handleCategoryChange = (event) => {
       setCategory(event.target.value);
     };
   
-    // Handle search input change
     const handleSearchChange = (event) => {
       setSearchTerm(event.target.value.toLowerCase());
     };
   
-    // Filter recipes based on category and search term
     const filteredRecipes = recipes.filter((recipe) => {
       const matchesCategory = category ? recipe.category === category : true;
       const matchesSearch =
@@ -183,7 +181,6 @@ export default function RecipeList() {
   
     return (
       <Container sx={{ py: 4 }}>
-        {/* Filter and search bar */}
         <div style={{ marginBottom: "20px" }}>
           <FormControl variant="outlined" sx={{ marginRight: 2, minWidth: 150 }}>
             <InputLabel>Category</InputLabel>
@@ -209,7 +206,6 @@ export default function RecipeList() {
           />
         </div>
   
-        {/* Display filtered recipes */}
         <Grid container spacing={4}>
           {filteredRecipes.map((recipe, index) => (
             <Grid item key={index} xs={12} sm={6} md={4}>
